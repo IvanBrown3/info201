@@ -1,0 +1,145 @@
+---
+title: "A3: SPL Library Checkouts"
+output: html_document
+---
+
+### Introduction
+
+An introduction of the data and a description of the trends/books/items you are choosing to analyze (and why!)
+
+## After digging through the 2017-2023 Seattle Public Library Dataset I thought of some interesting analysis questions that I would be able to show through graphs using ggplot. The first trend that I analyzed was the amount of Harry Potter books that were checked out between 2017 and 2018 on a per month basis. The reason why I wanted to see this is because it was around the time when I first got into the book series and fell completely into the story. I wanted to see if I started reading around a peak of popularity or if it was more popular by checkout number the following year. The second trend that I analyzed was used the material type column and each row of the data set. With a line graph, I wanted to see if there would be a sudden spike in e-book reading around the start of the Covid pandemic. To little suprise it turns out ebooks and audio books did skyrocket by the number of checkouts. Finally, with my last chart I was still interested to show a more general comparison of the amount of physical vs digital checkouts there were between 2017 and 2023. I wanted to see this because I am interested about how a majority of readers prefer to take in their scholarly media. ##
+
+### Summary Information
+
+Write a summary paragraph of findings that includes the 5 values calculated from your summary information R
+script
+
+These will likely be calculated using your DPLYR skills, answering questions such as:
+
+- What is the average number of checkouts for each item?
+- What is the month or year with the most/least checkouts for a book that you're interested in?
+- What is the month or year with the most/least checkouts for ebooks?
+- How has the number of print book checkouts changed over time?
+
+Feel free to calculate and report values that you find relevant.
+
+
+
+## 1) So far the most frequent material type of a book checkout through the SPL is EBOOKs with a incredible 104348 people who have checked out this year. ##
+
+
+## 2) During August in 2018 there was an incredible spike in Harry Potter Book popularity with an incredible 1893 people who checked out these books which is a higher value than any months prior or after in 2017 or 2018. ##
+
+
+## 3) In 2017 there were 2763572 physical books that were checked out by the SPL. ##
+
+
+## 4) The average monthly check outs for 2018 was 1421 items per month. ##
+
+
+## 5) The average amount of digital books checkout per year is 1,026,150 between 2017-2023. ##
+
+
+
+### The Dataset
+
+- Who collected/published the data?  
+
+## The Seattle Public Library collected this data with publisher and owner of the data set being David Christensen. ##
+
+
+- What are the parameters of the data (dates, number of checkouts, kinds of books, etc.)?
+
+## The parameters of this data are UsageClass,	CheckoutType,	MaterialType,	CheckoutYear,	CheckoutMonth,	Checkouts,	Title,	ISBN,	Creator,	Subjects,	Publisher, and	PublicationYear. With a total of 816354 rows in the set.##
+
+
+- How was the data collected or generated?  
+
+## The data is generated through computer systems tracking each barcode and corrisponding that book and that checkout time with categorically filtering ways. Each transaction through the SPL system is converted to data that is generated through smart spread sheets. ##
+
+
+- Why was the data collected?  
+
+## The data is collected in order to facilitate better public understanding of City operations and other data that has a potential to effect their families and communites. This data is opensource to present everyone with more information about their communities and improve economic opportunites for others using the data. ##
+
+
+- What, if any, ethical questions do you need to consider when working with this data?  
+
+## Overall, the data presented by the Seattle Public Library is ethical in just about every standard. The only concern and question I believe should be considered with a open data set like this is to highlight which communities, suburbs or cities are the ones checking out all of these items. It would be powerful to show which communities are the most involved with the libraries and which are not. Their could be a potential barrier with some communites with access to the library system. In this way the data can be used to understand communties better and create impactful change to improve accesibility to all. When using this data is is important to consider how these trends were affected with the Covid pandemic as well. ##
+
+
+- What are possible limitations or problems with this data?   (at least 200 words)
+
+## Part of the limitations with this data set is that it is only tracking occurrences where at least 10 checkouts were made a month. This can fit the data better as it isn't considering a larger majority of data that could lower the general averages as there is likely a lot of times that less than 10 or even 0 check outs could have occurred. Besides this artifact of the data, another possible problem with this data set is that is too big. The dataset has almost too much specific information that some of the columns become hard to work with if there is no pattern in the string to filter with. But this issue only occurs with a few columns that have places for data cleaning and touch up. An additional limitation of the data is that it doesn't account for which locations these check out occurrences are happening. It could show more popular areas where items from the library are checked out. Although this would add to the vastness of the data set. If many of the columns were removed or truncated to a new data set then it would be easy to push through to GitHub and knit the code into the html file. ##
+
+
+
+### First Trends Over Time Chart
+
+Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+
+The first chart that you will create and include will show the trend over time of your variable/topic/interest.
+Think carefully about what you want to communicate to your user (you may have to find relevant trends in the 
+dataset first!). Here are some requirements to help guide your design:
+
+- Show more than one, but fewer than ~10 trends
+  - For example, two books, or 5 different mediums
+- You must have clear x and y axis labels
+- The chart needs a clear title 
+- You need a legend for your different line colors and a clear - legend title
+In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
+
+When we say "clear" or "human readable" titles and labels, that means that you should not just display the 
+variable name.
+
+Here's an example of how to run an R script inside an RMarkdown file:
+
+```{r, echo = FALSE, warning = FALSE, code = readLines("chart1_example.R")}
+```
+
+## I included this chart to show how the popularity of Harry Potter books in seattle changed around the time that I first got into the book series. I displayed a line graph depicting the monthly amount of checkouts to compare 2017 checkouts to 2018 checkouts. From the graph, the most distinct pattern to emerge is that there was a generally higher amount of Harry Potter books checked out in 2017 compared to 2018. However there is a large spike in August of 2018, I think this is due to the emergence of the Fantastic Beasts Harry Potter spinoff movies that were being released and hyped up at that time. ##
+
+
+### Second Trends Over Time Chart
+
+Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+
+The second chart that you will create and include will show another trend over time of your 
+variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find 
+relevant trends in the dataset first!). Here are some requirements to help guide your design:
+
+- Show more than one, but fewer than ~10 trends
+- For example, two books, or 5 different mediums
+- You must have clear x and y axis labels
+- The chart needs a clear title 
+- You need a legend for your different line colors and a clear - legend title
+In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
+
+When we say "clear" or "human readable" titles and labels, that means that you should not just display the 
+variable name.
+
+Here's an example of how to run an R script inside an RMarkdown file:
+
+```{r, echo = FALSE, code = readLines("chart2_example.R")}
+```
+
+
+## In this second chart I wanted to show the rises and falls of certain book material types. I was interested to see the difference between audio books, physical books, and e-books as I use all of the above. From the graph the main trend to see is that e-book and audio books dramatically grew in popularity in 2020. I think this is due to the pandemic as all libraries closed so a majority of checked out books were ebooks that can be downloaded from the SPL website to your device. Audio books also grew in popularity at this time. It is also clear that physical books were dominating the checkout scene 2019 and before. ##
+
+### Your Choice
+
+The last chart is up to you. It could be a line plot, scatter plot, histogram, bar plot, stacked bar plot, and 
+more. Here are some requirements to help guide your design:
+
+- You must have clear x and y axis labels
+- The chart needs a clear title 
+- You need a legend for your different line colors and a clear legend title
+
+Here's an example of how to run an R script inside an RMarkdown file:
+
+
+```{r, echo = FALSE, code = readLines("chart3_example.R")}
+```
+
+## In the third graph that I produced I wanted to show the trend of physical books vs digital books over the past seven years. Although the former data showed growing popularity in e-books, I wanted to quantify a comparison between physical and digital books. From the bar graph, the main trend to identify is that physical books were about twice as popular than digital items from 2017-2019. From 2020 and beyond digial items started becoming the standard with a very large majority of checkouts shows to be digital. ##
+
